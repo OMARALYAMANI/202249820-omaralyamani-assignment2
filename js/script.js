@@ -7,7 +7,6 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     if (target) {
       e.preventDefault();
       target.scrollIntoView({ behavior: "smooth" });
-      // close mobile menu after click
       document.querySelector(".nav-links")?.classList.remove("open");
     }
   });
@@ -17,47 +16,84 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector(".nav-links");
 
-navToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("open");
-});
+if (navToggle && navLinks) {
+  navToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+  });
+}
 
 // Greeting message by time of day
 const greetingEl = document.getElementById("greeting");
 const hour = new Date().getHours();
 let greeting = "Welcome!";
 
-if (hour < 12) greeting = "Good morning 👋";
-else if (hour < 18) greeting = "Good afternoon 👋";
-else greeting = "Good evening 👋";
+if (hour < 12) {
+  greeting = "Good morning 👋";
+} else if (hour < 18) {
+  greeting = "Good afternoon 👋";
+} else {
+  greeting = "Good evening 👋";
+}
 
-greetingEl.textContent = greeting;
+if (greetingEl) {
+  greetingEl.textContent = greeting;
+}
 
-// Theme toggle (dark/light)
+// Theme toggle with localStorage
 const themeBtn = document.getElementById("themeBtn");
 
 function setTheme(isLight) {
   document.body.classList.toggle("light", isLight);
-  themeBtn.textContent = isLight ? "☀️" : "🌙";
+  if (themeBtn) {
+    themeBtn.textContent = isLight ? "☀️" : "🌙";
+  }
   localStorage.setItem("theme", isLight ? "light" : "dark");
 }
 
 const savedTheme = localStorage.getItem("theme");
 setTheme(savedTheme === "light");
 
-themeBtn.addEventListener("click", () => {
-  const isLight = !document.body.classList.contains("light");
-  setTheme(isLight);
-});
+if (themeBtn) {
+  themeBtn.addEventListener("click", () => {
+    const isLight = !document.body.classList.contains("light");
+    setTheme(isLight);
+  });
+}
 
-// Fake contact form submission (no backend)
+// Contact form validation and feedback
 const contactForm = document.getElementById("contactForm");
 const formStatus = document.getElementById("formStatus");
 
-contactForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  formStatus.textContent = "✅ Thanks! Your message has been sent successfully.";
-  contactForm.reset();
-});
+if (contactForm && formStatus) {
+  contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!name || !email || !message) {
+      formStatus.textContent = "Please fill in all fields before submitting.";
+      formStatus.className = "form-status error";
+      return;
+    }
+
+    if (!emailPattern.test(email)) {
+      formStatus.textContent = "Please enter a valid email address.";
+      formStatus.className = "form-status error";
+      return;
+    }
+
+    formStatus.textContent = "✅ Thanks! Your message has been sent successfully.";
+    formStatus.className = "form-status success";
+    contactForm.reset();
+  });
+}
 
 // Footer year
-document.getElementById("year").textContent = new Date().getFullYear();
+const yearEl = document.getElementById("year");
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name | Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="#top">MyPortfolio</a>
+
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="themeBtn" class="theme-btn" type="button">🌙</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <h1>Hi, I’m <span class="accent">OMAR ALYAMANI</span></h1>
+      <p class="tagline">Aspiring Web Developer passionate about creating clean designs and interactive web experiences.</p>
+      <p id="greeting" class="greeting"></p>
+      <a class="btn" href="#projects">View My Projects</a>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <div class="about-grid">
+        <img class="profile" src="assets/images/profile-placeholder.png" alt="Profile placeholder" />
+        <div>
+          <p>
+            I am a passionate student learning web development and building a strong foundation in HTML, CSS, and JavaScript. I enjoy creating clean, responsive websites and continuously improving my technical skills. 
+          </p>
+          <p>
+            My goal is to become a professional developer and build useful, user-friendly web applications.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+
+      <div class="projects-grid">
+        <article class="card">
+          <img src="assets/images//to-do list.avif" alt="Project placeholder" />
+          <h3>To-Do List Application</h3>
+          <p>This is a simple task management application that allows users to add, delete, and mark tasks as completed. I built this project to improve my understanding of JavaScript DOM manipulation and user interaction handling.</p>
+          <a href="#" class="card-link">View</a>
+        </article>
+
+        <article class="card">
+          <img src="assets/images/Calculator Web App.jfif" alt="Project placeholder" />
+          <h3>Calculator Web App</h3>
+          <p>This is a basic calculator application that performs arithmetic operations such as addition, subtraction, multiplication, and division. I developed this project to practice JavaScript logic, event handling, and building interactive web applications.</p>
+          <a href="#" class="card-link">View</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+
+      <form id="contactForm" class="contact-form">
+        <label>
+          Name
+          <input type="text" id="name" name="name" required />
+        </label>
+
+        <label>
+          Email
+          <input type="email" id="email" name="email" required />
+        </label>
+
+        <label>
+          Message
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </label>
+
+        <button class="btn" type="submit">submit</button>
+        <p id="formStatus" class="form-status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> OMARALYAMANI. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

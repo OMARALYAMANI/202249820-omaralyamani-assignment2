@@ -119,12 +119,6 @@ git clone https://github.com/your-username/id-name-assignment2.git
 
 No additional setup is required.
 
----
-
-## 🌐 Live Deployment (Optional)
-
-If deployed using GitHub Pages:
-https://your-username.github.io/id-name-assignment2/
 
 ---
 

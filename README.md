@@ -1,18 +1,19 @@
-
-# Assignment 1 – Personal Portfolio Web Application
+# Assignment 2 – Interactive Features
 
 ## 📌 Project Overview
 
-This project is a simple, responsive personal portfolio website built using HTML, CSS, and JavaScript.  
-It represents the starting point of my professional portfolio and demonstrates foundational front-end development skills.
+This project is an enhanced version of my personal portfolio website from Assignment 1.  
+It focuses on improving interactivity, user experience, and modern web development practices using JavaScript.
 
 The website includes:
 
-- About Me section
-- Projects section (with at least two projects)
-- Contact form (frontend only)
-- Responsive design for desktop, tablet, and mobile
-- JavaScript interactivity features
+- About Me section  
+- Projects section  
+- Contact form with validation  
+- Dynamic greeting based on time  
+- Dark/Light theme toggle with localStorage  
+- Improved animations and user interactions  
+- Responsive design for desktop, tablet, and mobile  
 
 ---
 
@@ -20,17 +21,17 @@ The website includes:
 
 This project was developed to:
 
-- Practice HTML structure and semantic elements  
-- Apply CSS styling and responsive design  
-- Use JavaScript for interactivity  
-- Organize files using a clean folder structure  
-- Document AI usage clearly and responsibly  
+- Extend the Assignment 1 portfolio with interactive features  
+- Apply JavaScript for dynamic content and user interaction  
+- Improve user experience with animations and feedback  
+- Implement basic data handling (localStorage, form validation)  
+- Maintain clean code structure and documentation  
 
 ---
 
 ## 🗂 Folder Structure
 
-assignment-1/
+assignment-2/
 ├── README.md
 ├── index.html
 ├── css/
@@ -44,41 +45,37 @@ assignment-1/
 │ └── technical-documentation.md
 └── .gitignore
 
-
-
-### File Description
-
-- `index.html` → Main structure and content of the website  
-- `css/styles.css` → Styling and responsive design  
-- `js/script.js` → JavaScript interactivity features  
-- `assets/images/` → Images used in the website  
-- `docs/ai-usage-report.md` → Detailed explanation of AI usage  
-- `docs/technical-documentation.md` → Technical explanation of features  
-- `.gitignore` → Prevents unnecessary system or development files from being uploaded  
-
 ---
 
 ## 💻 Features Implemented
 
 ### 1️⃣ About Me Section
-- 2–3 sentence personal introduction  
-- Professional one-line tagline  
-- Profile image placeholder  
+- Personal introduction  
+- Professional tagline  
+- Profile image  
 
 ### 2️⃣ Projects Section
-- Two sample projects  
+- Two projects displayed  
 - Each project includes:
   - Title  
-  - Short description  
-  - Placeholder image  
+  - Description  
+  - Image  
 
 ### 3️⃣ Contact Section
 - Contact form with:
   - Name  
   - Email  
   - Message  
-- HTML validation using `required`  
-- JavaScript confirmation message (no backend required)  
+- JavaScript validation:
+  - Checks for empty fields  
+  - Validates email format  
+- Displays success and error messages  
+
+### 4️⃣ Interactive Features
+- Dynamic greeting message based on time of day  
+- Dark/Light theme toggle  
+- Mobile navigation toggle  
+- Smooth scrolling between sections  
 
 ---
 
@@ -86,67 +83,48 @@ assignment-1/
 
 The website is fully responsive and adapts to:
 
-- Desktop screens  
-- Tablets  
-- Mobile devices  
+- Desktop  
+- Tablet  
+- Mobile  
 
 Responsive techniques used:
 
 - CSS Grid and Flexbox  
 - Media queries  
-- Mobile navigation toggle  
-
-Testing was performed using browser resizing and DevTools device simulation.
+- Mobile navigation menu  
 
 ---
 
 ## ⚡ JavaScript Interactivity
 
-The project includes the following interactive features:
+The project includes:
 
 - Smooth scrolling navigation  
-- Dark/Light theme toggle (stored in localStorage)  
-- Greeting message based on time of day  
-- Contact form interaction message  
+- Theme toggle with localStorage  
+- Dynamic greeting message  
+- Contact form validation and feedback  
+- Mobile menu toggle  
 - Automatic footer year update  
-
----
-
-## 🤖 AI Usage Summary
-
-AI tools were used to assist with:
-
-- Generating initial HTML, CSS, and JavaScript structure  
-- Debugging and improving code  
-- Suggesting responsive layout improvements  
-- Assisting with documentation writing  
-
-All AI-generated suggestions were reviewed, modified, tested, and fully understood before submission.
-
-Full details are available in:
-
 
 ---
 
 ## 🚀 How to Run the Project Locally
 
 1. Clone the repository:
-git clone https://github.com/your-username/id-name-assignment1.git
+git clone https://github.com/your-username/id-name-assignment2.git
 
+2. Open the project folder
 
-2. Open the project folder.
+3. Open `index.html` in your browser
 
-3. Open `index.html` in your web browser.
-
-No additional installation or backend setup is required.
+No additional setup is required.
 
 ---
 
 ## 🌐 Live Deployment (Optional)
 
 If deployed using GitHub Pages:
-https://your-username.github.io/id-name-assignment1/
-
+https://your-username.github.io/id-name-assignment2/
 
 ---
 
@@ -154,30 +132,28 @@ https://your-username.github.io/id-name-assignment1/
 
 Through this assignment, I learned:
 
-- How to structure a front-end project professionally  
-- How to build responsive layouts  
-- How to use JavaScript for DOM manipulation  
-- How to responsibly integrate AI tools in development  
-- The importance of documentation and clean code organization  
+- How to enhance a static website with JavaScript interactivity  
+- How to use localStorage for saving user preferences  
+- How to validate user input in forms  
+- How to improve UI/UX using animations and feedback  
+- How to structure and document a scalable web project  
 
 ---
 
 ## ✅ Code Quality
 
-- Clean and consistent indentation  
+- Clean and readable code  
 - Organized folder structure  
-- Meaningful file naming  
-- Comments explaining important logic  
-- No broken links or unused code  
+- Consistent naming conventions  
+- No duplicated or unused code  
+- All features tested and working  
 
 ---
 
 ## 📚 Academic Integrity Statement
 
 This project was completed individually.  
-AI tools were used only as development assistance.  
-All code was reviewed, modified, and understood before submission.  
-No plagiarism or unauthorized collaboration was involved.
+All code was written, reviewed, and understood before submission.  
+No unauthorized collaboration or plagiarism was involved.
 
-## Optional Live Demo
-https://yourusername.github.io/repository-name/
+---

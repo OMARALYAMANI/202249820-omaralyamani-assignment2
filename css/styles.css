@@ -201,3 +201,85 @@ input, textarea {
 
   .nav-links.open { display: flex; }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.card,
+.btn,
+.card-link,
+.theme-btn,
+.nav-toggle,
+input,
+textarea {
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+.btn:hover,
+.theme-btn:hover,
+.nav-toggle:hover {
+  transform: scale(1.04);
+  opacity: 0.95;
+}
+
+.card-link:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
+.form-status {
+  min-height: 24px;
+  font-weight: 600;
+}
+
+.form-status.success {
+  color: #22c55e;
+  animation: fadeIn 0.4s ease;
+}
+
+.form-status.error {
+  color: #ef4444;
+  animation: fadeIn 0.4s ease;
+}
+
+.hero,
+.section {
+  animation: fadeInUp 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

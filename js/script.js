@@ -1,7 +1,13 @@
-// Smooth scrolling for anchor links
+// Smooth scrolling for valid anchor links only
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener("click", (e) => {
     const targetId = link.getAttribute("href");
+
+    // Ignore empty or invalid links like "#"
+    if (!targetId || targetId === "#") {
+      return;
+    }
+
     const target = document.querySelector(targetId);
 
     if (target) {
@@ -44,9 +50,11 @@ const themeBtn = document.getElementById("themeBtn");
 
 function setTheme(isLight) {
   document.body.classList.toggle("light", isLight);
+
   if (themeBtn) {
     themeBtn.textContent = isLight ? "☀️" : "🌙";
   }
+
   localStorage.setItem("theme", isLight ? "light" : "dark");
 }
 
